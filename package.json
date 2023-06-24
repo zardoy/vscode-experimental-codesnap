@@ -4,6 +4,7 @@
     "publisher": "zardoy",
     "version": "0.0.0-dev",
     "license": "MIT",
+    "description": "Adds editor code as exif to your code desktop screenshot (supports shift+drop restore)",
     "categories": [
         "Other"
     ],
