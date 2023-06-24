@@ -1,0 +1,73 @@
+{
+    "name": "experimental-codesnap",
+    "displayName": "Experimental Codesnap",
+    "publisher": "zardoy",
+    "version": "0.0.0-dev",
+    "license": "MIT",
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "contributes": {
+        "configuration": {
+            "properties": {
+                "overrideDir": {
+                    "type": "string",
+                    "description": "Specify directory to save, otherwise will be prompted first after ext host restarted"
+                },
+                "overridePath": {
+                    "type": "string",
+                    "description": "Override overrideDir setting, otherwise will increment filename e.g. 0.jpg -> 1.jpg"
+                },
+                "cropBounds": {
+                    "type": "object",
+                    "properties": {
+                        "x": {
+                            "type": "number"
+                        },
+                        "y": {
+                            "type": "number"
+                        },
+                        "xFromEnd": {
+                            "type": "number"
+                        },
+                        "yFromEnd": {
+                            "type": "number"
+                        }
+                    }
+                }
+            }
+        },
+        "commands": [
+            {
+                "title": "Capture Screen",
+                "command": "captureScreen"
+            }
+        ]
+    },
+    "scripts": {
+        "start": "vscode-framework start"
+    },
+    "dependencies": {
+        "@types/node": "^20.3.1",
+        "@types/vscode": "1.78.0",
+        "@zardoy/tsconfig": "^1.5.0",
+        "@zardoy/vscode-utils": "^0.0.48",
+        "jimp": "^0.22.8",
+        "piexifjs": "2.0.0-beta.9",
+        "screenshot-desktop": "^1.14.0",
+        "vscode-framework": "^0.0.18"
+    },
+    "prettier": {
+        "semi": false,
+        "singleQuote": true,
+        "proseWrap": "never",
+        "tabWidth": 4,
+        "trailingComma": "all",
+        "arrowParens": "avoid",
+        "printWidth": 160,
+        "endOfLine": "auto"
+    }
+}
